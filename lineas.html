@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lineas</title>
+    </head>
+    <body>
+    <style>
+         *{
+            margin:0;
+            padding:0;
+           
+            text-decoration:none;
+            color:white;
+        }
+   body{
+   padding:50px 0 50px 0;
+   max-width:1400px;
+   height:100%;
+  
+   background-color:black;
+   
+  
+   }
+   p{
+   margin:30px;
+   text-align:center}
+   .contenedor{
+       width:100%;
+       height:100%;
+       overflow:hidden;
+        display:flex;
+   flex-direction:column;
+   align-items:center;
+   gap:20px
+       
+   }
+    </style>
+    
+    <div class="contenedor">
+    <p>bloque-linea_aa</p>
+     <div class="bloque-linea_aa"></div>
+    <style>
+       
+  
+  .bloque-linea_aa{
+      width:100%;
+      min-height:40px;
+      background-color:red;
+      clip-path:polygon(0%0%,45.5%0%,50%85%,54.5%0%,100%0%,100%10%,55%10%,50%100%,45%10%,0%10%)
+      
+  }
+   
+       </style>
+      
+     <p>bloque-linea_bb</p>
+   <div class="bloque-linea_bb"></div>
+    <style>
+       
+  
+  .bloque-linea_bb{
+      width:100%;
+      min-height:10px;
+      background-color:blue;
+      clip-path:polygon(0%100%,50%0%,100%100%);
+    background: linear-gradient(to left, transparent, cornflowerblue, transparent);  
+  }
+  </style>
+   <p>bloque-linea_cc</p>
+   <div class="bloque-linea_cc"></div>
+    
+    <style>
+       
+  
+  .bloque-linea_cc{
+      width:100%;
+      min-height:10px;
+      background-color:blue;
+      clip-path:polygon(0%0%,100%0%,50%100%)
+      
+  }
+   
+       </style>
+       
+        <p>bloque-linea_dd</p>
+       <div class="bloque-linea_dd"></div>
+    <style>
+       
+  
+  .bloque-linea_dd{
+      width:100%;
+      min-height:40px;
+     clip-path:polygon(0%0%,45.5%0%,50%85%,54.5%0%,100%0%,100%10%,55%10%,50%100%,45%10%,0%10%);
+
+      position:relative;
+  }
+  .bloque-linea_dd::before{
+  content:"";
+  width:20%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background: linear-gradient(to left, transparent, greenyellow, transparent);
+ animation: bl_dd 2s linear infinite;
+ }
+ @keyframes bl_dd{
+     0%{left:-20%}
+     100%{left:100%}
+ }
+       </style>
+       
+       
+          <p>bloque-linea_ee</p>
+       <div class="bloque-linea_ee"></div>
+    <style>
+       
+  
+  .bloque-linea_ee{
+      width:100%;
+      min-height:40px;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+overflow:hidden;
+      position:relative;
+      
+      clip-path:polygon(0%0%,30%40%,60%0%,100%40%,100%50%,60%10%,30%60%,0%15%)
+  }
+  .bloque-linea_ee::before{
+  content:"";
+  width:10%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background: linear-gradient(to left, transparent, greenyellow, transparent);
+ animation: bl_ee 2s linear alternate infinite;
+ }
+ @keyframes bl_ee{
+     0%{left:-20%}
+     100%{left:100%}
+ }
+       </style>
+       
+       
+        <p>bloque-linea_ff</p>
+       <div class="bloque-linea_ff"></div>
+    <style>
+       
+  
+  .bloque-linea_ff{
+      width:300px;
+      min-height:40px;
+    
+      position:relative;
+      background-color:mediumorchid;
+      clip-path:path("M0 40 Q150 0 300 40 150 20 0 40")
+  }
+       
+    .bloque-linea_ff::before{
+  content:"";
+  width:30%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background: linear-gradient(to left, transparent, white, transparent);
+ animation: bl_ff 2s ease-in-out alternate infinite;
+ }
+ @keyframes bl_ff{
+      0%{left:-20%}
+     100%{left:100%}
+ }
+       </style>   
+       
+       
+       
+        <p>bloque-linea_gg</p>
+       <div class="bloque-linea_gg"></div>
+    <style>
+       
+  
+  .bloque-linea_gg{
+      width:300px;
+      min-height:40px;
+    overflow: hidden;
+      position:relative;
+      background-color:orangered;
+      clip-path:path("M0 0 Q150 20 300 0 150 40 0 0")
+  }
+       
+    .bloque-linea_gg::before{
+  content:"";
+  width:30%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background: linear-gradient(to left, transparent, white, transparent);
+ animation: bl_gg 2s ease-in-out alternate infinite;
+ }
+ @keyframes bl_gg{
+      0%{left:-20%}
+     100%{left:100%}
+ }
+       </style>   
+       
+        <p>bloque-linea_hh</p>
+       <div class="bloque-linea_hh"></div>
+    <style>
+       
+  
+  .bloque-linea_hh{
+      width:300px;
+      height:40px;
+    transform:scale(100%);
+      position:relative;
+      background-color:green;
+      clip-path:path("M0 35 Q75 0 150 20 225 35 300 0 300 5 300 5 225 40 150 25 75 5 0 40 0 35 0 35")
+  }
+  .bloque-linea_hh::before{
+  content:"";
+  width:30%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background: linear-gradient(to left, transparent, white, transparent);
+ animation: bl_hh 2s ease-in-out alternate infinite;
+ }
+ @keyframes bl_hh{
+      0%{left:-20%}
+     100%{left:100%}
+ }
+       </style>   
+       
+       
+         <p>bloque-linea_ii</p>
+       <div class="bloque-linea_ii"></div>
+    <style>
+       
+  
+  .bloque-linea_ii{
+      width:100%;
+      height:100px;
+    background:black;
+      position:relative;
+      
+     
+  }
+  .bloque-linea_ii::before{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background:#0fabff;
+ clip-path:polygon(0%0%,100%0%,100%10%,50%90%,0%10%)
+ }
+ .bloque-linea_ii::after{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+ background:#bde0fe;
+ clip-path:polygon(0%10%,50%90%,100%10%,100%100%,0%100%)
+ }
+ 
+       </style>   
+      
+      
+      <p>bloque-linea_jj</p> 
+       <div class="bloque-linea_jj"></div>
+    <style>
+       
+  
+  .bloque-linea_jj{
+      width:100%;
+      height:30px;
+    background:orange;
+      position:relative;
+      
+      clip-path:polygon(0%0%,100%80%,100%100%,0%20%);
+     
+  }
+  
+       </style>   
+      
+       
+</body>
+</html>
